@@ -1,0 +1,23 @@
+server:
+  port: 9082
+  error:
+    include:
+      message: true
+
+spring:
+  application:
+    name: geo-service
+  datasource:
+    hikari:
+      connection-timeout: 20000
+      minimum-idle: 10
+      maximum-pool-size: 30
+      idle-timeout: 10000
+      max-lifetime: 1000
+      auto-commit: true
+    username: postgres
+    password: secret
+    url: 'jdbc:postgresql://localhost:5432/geo-service'
+logging:
+  level:
+    root: INFO
