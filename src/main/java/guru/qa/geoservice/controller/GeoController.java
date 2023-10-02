@@ -36,7 +36,7 @@ public class GeoController {
     }
 
     @PatchMapping("/{code}")
-    public ResponseEntity<Geo> changeCountry(@PathVariable String code,
+    public ResponseEntity<Geo> changeGeoName(@PathVariable String code,
                                           @RequestBody GeoJson geo){
         try {
             GeoEntity updatedEntity = geoService.updateName(code, geo.getName());
