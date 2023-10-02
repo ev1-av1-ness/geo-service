@@ -1,7 +1,6 @@
 package guru.qa.geoservice.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import guru.qa.geoservice.data.entity.GeoEntity;
 
 import java.util.UUID;
 
@@ -45,14 +44,5 @@ public class GeoJson {
 
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
-    }
-
-    public static GeoJson fromEntity(GeoEntity entity) {
-        GeoJson geoJson = new GeoJson();
-        geoJson.setId(entity.getId());
-        geoJson.setName(entity.getName());
-        geoJson.setCode(entity.getCode());
-        geoJson.setCoordinates(entity.getCoordinates().toString());
-        return geoJson;
     }
 }

@@ -1,8 +1,5 @@
 server:
   port: 9082
-  error:
-    include:
-      message: true
 
 logging:
   level:
