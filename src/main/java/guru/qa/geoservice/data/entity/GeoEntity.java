@@ -25,6 +25,14 @@ public class GeoEntity {
     @JdbcTypeCode(SqlTypes.JSON)
     private List<List<List<List<Double>>>> coordinates;
 
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }

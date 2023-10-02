@@ -4,7 +4,15 @@ server:
     include:
       message: true
 
+logging:
+  level:
+    root: INFO
+
 spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   application:
     name: geo-service
   datasource:
@@ -18,6 +26,3 @@ spring:
     username: postgres
     password: secret
     url: 'jdbc:postgresql://localhost:5432/geo-service'
-logging:
-  level:
-    root: INFO

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -20,7 +21,12 @@ public class GeoService {
     }
 
     @Transactional
-    public GeoEntity addCountry(Geo geo) {
+    public List<GeoEntity> getAllGeo() {
+        return (List<GeoEntity>) geoRepository.findAll();
+    }
+
+    @Transactional
+    public GeoEntity addGeo(Geo geo) {
         GeoEntity geoEntity = new GeoEntity();
         geoEntity.setName(geo.name());
         geoEntity.setCode(geo.code());
